@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESC - SIGN UP</title>
+    <link rel="shortcut icon" href="./images/ESC.png" type="image/x-icon">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <!--video-js-->
+    <link rel="stylesheet" href="./styles/video-js.min.css">
+    <link rel="stylesheet" href="./styles/video-js-city.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--main style sheet-->
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body id="sign-up-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Earth Science Community">ESC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./connections.html">Make Connections</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Top Scientist</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./posts.html">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./questions.html">Question</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./search.html">search</a>
+                    </li>
+                    <li><hr class="dropdown-divider d-lg-none"></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+                <!-- <ul class="navbar-nav" id="profile-dropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="p-pic" src="./images/M0.jpeg" alt="M0">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item">name</li>
+                            <li class="dropdown-item">Jop</li>
+                            <li><a href="./profile.html" class="btn btn-outline-dark">View Profile</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+                <div class="sign-div">
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</button>
+                    <a href="./sign-up.html" class="btn btn-outline-dark">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="fader"></div>
+        <div class="container">
+            <h1>Earth Science Community</h1>
+            <p>A place that every scientist will love</p>
+        </div>
+    </header>
+
+
+    <section>
+       <h2>Sign up</h2>
+       <div class="container">
+           <div id="profile-pic-preview" class="center-me">
+               <img src="./images/user_male.png" alt="user-pic" id="preview-profile-pic">
+               <button type="button" class="btn btn-outline-dark" id="sign-up-upload-pic">Choose Picture</button>
+           </div>
+            <form method="post" id="sign-up-form">
+                <div class="d-none">
+                    <label for="sign-up-profile-pic" class="form-label">profile pic</label>
+                    <input class="form-controlsign-up-profile-pic form-control-sm" id="sign-up-profile-pic" name="sign-up-profile-pic" type="file">
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="sign-up-fname" name="sign-up-fname" aria-describedby="fnameHelp">
+                    <div id="fnameHelp" class="form-text">This field is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-lname" class="form-label">last name</label>
+                    <input type="text" class="form-control" id="sign-up-lname" name="sign-up-lname" aria-describedby="lnameHelp">
+                    <div id="lnameHelp" class="form-text">This field is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-age" class="form-label">age</label>
+                    <input type="text" class="form-control" id="sign-up-age" name="sign-up-age" aria-describedby="ageHelp">
+                    <div id="ageHelp" class="form-text">This field is required</div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sign-up-gender" id="sign-up-gender1">
+                        <label class="form-check-label" for="sign-up-gender1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sign-up-gender" id="sign-up-gender2">
+                        <label class="form-check-label" for="sign-up-gender2">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sign-up-phone" class="form-label">phone number</label>
+                    <input type="text" class="form-control" id="sign-up-phone" name="sign-up-phone" aria-describedby="phoneHelp">
+                    <div id="phoneHelp" class="form-text">This field is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-textarea" class="form-label">Short Discreption About You</label>
+                    <textarea name="sign-up-textarea" id="sign-up-textarea" class="form-control"></textarea>
+                </div>
+                <div class="mb-3 count-container" id="educations">
+                    <div class="education count-header">
+                       <span>Education</span>
+                       <button type="button" class="btn btn-outline-dark" id="addEdu" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add education"><i class="fas fa-plus"></i></button>
+                    </div>
+                    
+                </div>
+                <div class="mb-3 count-container" id="positions">
+                    <div class="position count-header">
+                       <span>Position</span>
+                       <button type="button" class="btn btn-outline-dark" id="addPos" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add position"><i class="fas fa-plus"></i></button>
+                    </div>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="sign-up-email" name="sign-up-email" aria-describedby="sEmailHelp">
+                    <div id="sEmailHelp" class="form-text">This email is already signed-up please use another email or go to <a href="#">forget password</a></div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-c-email" class="form-label">confirm Email address</label>
+                    <input type="email" class="form-control" id="sign-up-c-email" name="sign-up-c-email" aria-describedby="cEmailHelp">
+                    <div id="cEmailHelp" class="form-text">the emails don't match</div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-pass" class="form-label">password</label>
+                    <input type="password" class="form-control" id="sign-up-pass" name="sign-up-pass" aria-describedby="passHelp">
+                    <div id="passHelp" class="form-text">Your password must contain (Lowercase charchters, uppercase charchters, numbers and special charchters)</div>
+                </div>
+                <div class="mb-3">
+                    <label for="sign-up-c-pass" class="form-label">confirm password</label>
+                    <input type="password" class="form-control" id="sign-up-c-pass" name="sign-up-c-pass" aria-describedby="cPassHelp">
+                    <div id="cPassHelp" class="form-text">The passwords don't match</div>
+                </div>
+                <div class="mb-3 center-me">
+                    <input type="submit" value="Submit" name="sign-up-submit" class="btn btn-outline-dark">
+                </div>
+            </form>
+       </div>
+        
+    </section>
+
+
+    <footer>
+        &copy; <a href="#">Mohamed Hany</a>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logInLabel">Log in to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" name="loginEmail" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">This email deson't exist</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPass" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPass"  name="loginPass" aria-describedby="loginPassHelp">
+                            <div id="loginPassHelp" class="form-text">Wrong Passowrd</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-text"><a href="./forget-pass.html">Foregt Passowrd</a> <a href="./reset-pass.html">Reset Passowrd</a></div>
+                        </div>
+                        <input type="submit" name="logInSupmit" class="d-none">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-dark">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--scripts-->
+<script src="./scripts/jquery-3.5.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/swiper-bundle.min.js"></script>
+<script src="./scripts/video.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>

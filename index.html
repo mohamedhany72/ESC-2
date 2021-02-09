@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESC - Earth Science Community</title>
+    <link rel="shortcut icon" href="./images/ESC.png" type="image/x-icon">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <!--video-js-->
+    <link rel="stylesheet" href="./styles/video-js.min.css">
+    <link rel="stylesheet" href="./styles/video-js-city.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--main style sheet-->
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body id="home-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Earth Science Community">ESC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./connections.html">Make Connections</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Top Scientist</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./posts.html">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./questions.html">Question</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./search.html">search</a>
+                    </li>
+                    <li><hr class="dropdown-divider d-lg-none"></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+                <!-- <ul class="navbar-nav" id="profile-dropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="p-pic" src="./images/M0.jpeg" alt="M0">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item">name</li>
+                            <li class="dropdown-item">Jop</li>
+                            <li><a href="./profile.html" class="btn btn-outline-dark">View Profile</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+                <div class="sign-div">
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</button>
+                    <a href="./sign-up.html" class="btn btn-outline-dark">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="fader"></div>
+        <div class="container">
+            <h1>Earth Science Community</h1>
+            <p>A place that every scientist will love</p>
+        </div>
+    </header>
+
+
+    <section id="updates">
+        <div class="container">
+            <h2>Your updates</h2>
+            <div class="note-row">
+                <p class="text"><a href="#" class="someone">someone</a> want to make connection with you</p> 
+                <div class="note-btns">
+                    <button class="btn btn-outline-dark connection-accept">Accept</button> <button class="btn btn-outline-dark connection-reject">Reject</button>
+                </div>
+            </div>
+            <div class="note-row">
+                <p><a href="#" class="someone">someone</a> react to your post <a href="#" class="note-post">Seismology</a></p> 
+            </div>
+            <div class="note-row">
+                 <p><a href="#" class="someone">someone</a> <span class="reaction">react</span> to your question "<a href="#" class="note-question">blah blah blah?</a>"... <a href="#" class="view-ans">view answer</a></p> 
+            </div>
+            <div class="center-me">
+                <a href="#" class="btn btn-outline-dark">View All Updates</a>
+            </div>
+        </div>
+    </section>
+
+    <!--add goes here-->
+    <div class="large-ad-space">
+        <div class="container">
+            <div class="large-ad">
+                Ad space
+            </div>
+        </div>
+    </div>
+
+
+    <section id="posts-section">
+        <div class="container">
+            <div id="add-post">
+                <h2>add new post</h2>
+
+                <!--add post form-->
+                <!-- <h3>Add post</h3> -->
+                <form method="post" id="home-add-post">
+                    <div class="mb-3">
+                        <label for="newPostTitle" class="form-label visually-hidden visually-hidden-focusable">Title</label>
+                        <input type="text" class="form-control" id="newPostTitle" name="newPostTitle" placeholder="Title" required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-row">
+                            <label for="newPostFile" class="form-label">Post Poster</label>
+                            <input type="file" class="form-control" id="newPostFile" name="newPostCategory" aria-describedby="posterHelp">
+                        </div>
+                        <div id="posterHelp" class="form-text">you choosed wrong file type</div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-row">
+                            <label for="newPostFiles" class="form-label">file</label>
+                            <input type="file" class="form-control" id="newPostFiles" name="newPostCategory" aria-describedby="multiMediaHelp" multiple>
+                        </div>
+                        <div id="multiMediaHelp" class="form-text">you choosed wrong file type</div>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="newPostText" class="form-control" id="new-post-text" rows="5" placeholder="Type text here"></textarea>
+                    </div>
+                    <div class="mb-3 form-row">
+                        <label for="newPostSelect" class="form-label">category</label>
+                        <select class="form-select" id="newPostSelect" aria-label="Default select example" required>
+                            <option value="" selected>Select Category</option>
+                            <option value="seismology">Seismology</option>
+                            <option value="gravity">Gravity</option>
+                            <option value="magnetic">Magnetic</option>
+                            <option value="elctromagnetic">Elctromagnetic</option>
+                            <option value="electric">Electric</option>
+                            <option value="well-logging">Well Logging</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 form-row">
+                        <label for="newPostTags" class="form-label">tags</label>
+                        <input type="text" class="form-control" id="newPostTags" name="newPostTags">
+                    </div>
+                    <div class="mb-3 form-row">
+                        <label for="newPostRefer" class="form-label">Refer</label>
+                        <input type="text" class="form-control" id="newPostRefer" name="newPostRefer" >
+                    </div>
+                    <div class="mb-3 count-container" id="post-add-link">
+                        <div class="count-header">
+                           <span>Links</span>
+                           <button type="button" class="btn btn-outline-dark" id="postAddLinkBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add Link"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="center-me">
+                        <input name="supmitNewPost" class="btn btn-outline-dark" type="submit" value="Submit">
+                    </div>
+                </form>
+
+                <!--preview your post-->
+                <h3>post preview</h3>
+                
+                <div class="post" id="new-post-preview">
+                    <h5 class="title">Earthquake</h5>
+                    <div class="swiper-container post-media" id="swipe1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide post-img"><img src="./images/eq1.jpeg" alt="eq1"></div>
+                            
+                            <div class="swiper-slide post-video swiper-no-swiping">
+                                <video id="my-video" class="video-js vjs-theme-city" controls preload="auto" poster="./images/lanscape.png" data-setup="{}">
+                                    <source src="./images/landscape.mp4" type="video/mp4" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
+                                </video>
+                            </div>
+                            
+                            <div class="swiper-slide post-img"><img src="./images/eq2.jpeg" alt="eq2"></div>
+
+                            <div class="swiper-slide post-video swiper-no-swiping">
+                                <video id="my-video-2" class="video-js vjs-theme-city" controls preload="auto" poster="./images/portrait.png" data-setup="{}">
+                                    <source src="./images/portrait.mp4" type="video/mp4" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
+                                </video>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="category"><span>Category: </span>seismology</div>
+                    <div class="tags">
+                        <span>Tags: </span>
+                        <span class="tag">earthquake seismology</span>
+                        <span class="tag">hazards</span>
+                    </div>
+                    <div class="post-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam veniam pariatur esse voluptate accusantium impedit quos corrupti corporis obcaecati repellat, eum voluptates itaque ab dolorem tenetur, eveniet delectus sed.</p>
+                    </div>
+                    <div class="refers">
+                        <span>Refers: </span>
+                        <span class="refer"><a href="#">Prof. Name</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="posts" id="posts">
+                <h2>New Posts</h2>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="filter">
+                            <div class="filter-header">
+                                <h4><i class="fas fa-filter"></i> Filter</h4>
+                                <span class="filter-arrow"><i class="fas fa-sort-down"></i></span>
+                            </div>
+                            <form method="GET" class="filter-form">
+                                <div class="check-group">
+                                    <h5>category</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-seismology">
+                                        <label class="form-check-label" for="p-filter-seismology">seismology</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-gravity">
+                                        <label class="form-check-label" for="p-filter-gravity">gravity</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-magnetic">
+                                        <label class="q-filter-magnetic" for="p-filter-seismology">magnetic</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-well-logging">
+                                        <label class="form-check-label" for="p-filter-well-logging">well-logging</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="check-group">
+                                    <h5>Tags</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-seismology-2">
+                                        <label class="form-check-label" for="p-filter-seismology-2">seismology</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-gravity-2">
+                                        <label class="form-check-label" for="p-filter-gravity-2">gravity</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-magnetic-2">
+                                        <label class="q-filter-magnetic" for="p-filter-seismology-2">magnetic</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="p-filter-well-logging-2">
+                                        <label class="form-check-label" for="p-filter-well-logging-2">well-logging</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="center-me">
+                                    <input type="submit" value="Filter Posts" name="submitPostFilter" class="btn btn-outline-dark">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ad-space">
+                            Ad Space
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="post">
+                            <div class="post-header">
+                                <h5 class="title"><a href="./post.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="post-row">
+                                    <div class="post-author"><span>Post By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-media">
+                                <img src="./images/lanscape.png" alt="55">
+                            </div>
+                            <div class="post-options">
+                                <div class="like-dislike">
+                                    <i class="far fa-thumbs-up like" data-bs-toggle="tooltip" data-bs-placement="bottom" title="like"></i>
+                                    <i class="far fa-thumbs-down dislike" data-bs-toggle="tooltip" data-bs-placement="bottom" title="dislike"></i>
+                                </div>
+            
+                                <div class="share-dropdown">
+                                    <i class="fas fa-share" data-bs-toggle="tooltip" data-bs-placement="bottom" title="share"></i>
+                                    <div class="navbar navbar-expand ms-3">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="options-drop-down dropdown-menu">
+                                            <li class="dropdown-item copy link">Copy Link</li>
+                                            <li class="dropdown-item not-interest">Not Interested</li>
+                                            <li class="dropdown-item un-follow">Unfollow User</li>
+                                            <li class="dropdown-item block">Block User</li>
+                                            <li class="dropdown-item report">Report Post</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="category"><span>Category: </span>seismology</div>
+                                <div class="post-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam veniam pariatur esse voluptate accusantium impedit quos corrupti corporis...<a href="./post.html" class="read-more">read more.</a></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-header">
+                                <h5 class="title"><a href="./post.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="post-row">
+                                    <div class="post-author"><span>Post By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-media">
+                                <img src="./images/portrait.png" alt="54545">
+                            </div>
+                            <div class="post-options">
+                                <div class="like-dislike">
+                                    <i class="far fa-thumbs-up like" data-bs-toggle="tooltip" data-bs-placement="bottom" title="like"></i>
+                                    <i class="far fa-thumbs-down dislike" data-bs-toggle="tooltip" data-bs-placement="bottom" title="dislike"></i>
+                                </div>
+            
+                                <div class="share-dropdown">
+                                    <i class="fas fa-share" data-bs-toggle="tooltip" data-bs-placement="bottom" title="share"></i>
+                                    <div class="navbar navbar-expand ms-3">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="options-drop-down dropdown-menu">
+                                            <li class="dropdown-item copy link">Copy Link</li>
+                                            <li class="dropdown-item not-interest">Not Interested</li>
+                                            <li class="dropdown-item un-follow">Unfollow User</li>
+                                            <li class="dropdown-item block">Block User</li>
+                                            <li class="dropdown-item report">Report Post</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="category"><span>Category: </span>seismology</div>
+                                <div class="post-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam veniam pariatur esse voluptate accusantium impedit quos corrupti corporis...<a href="./post.html" class="read-more">read more.</a></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-header">
+                                <h5 class="title"><a href="./post.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="post-row">
+                                    <div class="post-author"><span>Post By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-media video">
+                                <video id="my-video-3" class="video-js vjs-theme-city" controls preload="auto" poster="./images/portrait.png" data-setup="{}">
+                                    <source src="./images/portrait.mp4" type="video/mp4" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="post-options">
+                                <div class="like-dislike">
+                                    <i class="far fa-thumbs-up like" data-bs-toggle="tooltip" data-bs-placement="bottom" title="like"></i>
+                                    <i class="far fa-thumbs-down dislike" data-bs-toggle="tooltip" data-bs-placement="bottom" title="dislike"></i>
+                                </div>
+            
+                                <div class="share-dropdown">
+                                    <i class="fas fa-share" data-bs-toggle="tooltip" data-bs-placement="bottom" title="share"></i>
+                                    <div class="navbar navbar-expand ms-3">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="options-drop-down dropdown-menu">
+                                            <li class="dropdown-item copy link">Copy Link</li>
+                                            <li class="dropdown-item not-interest">Not Interested</li>
+                                            <li class="dropdown-item un-follow">Unfollow User</li>
+                                            <li class="dropdown-item block">Block User</li>
+                                            <li class="dropdown-item report">Report Post</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="category"><span>Category: </span>seismology</div>
+                                <div class="post-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam veniam pariatur esse voluptate accusantium impedit quos corrupti corporis...<a href="./post.html" class="read-more">read more.</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-header">
+                                <h5 class="title"><a href="./post.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="post-row">
+                                    <div class="post-author"><span>Post By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-media video">
+                                <video id="my-video-4" class="video-js vjs-theme-city" controls preload="auto" poster="./images/lanscape.png" data-setup="{}">
+                                    <source src="./images/landscape.mp4" type="video/mp4" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="post-options">
+                                <div class="like-dislike">
+                                    <i class="far fa-thumbs-up like" data-bs-toggle="tooltip" data-bs-placement="bottom" title="like"></i>
+                                    <i class="far fa-thumbs-down dislike" data-bs-toggle="tooltip" data-bs-placement="bottom" title="dislike"></i>
+                                </div>
+            
+                                <div class="share-dropdown">
+                                    <i class="fas fa-share" data-bs-toggle="tooltip" data-bs-placement="bottom" title="share"></i>
+                                    <div class="navbar navbar-expand ms-3">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="options-drop-down dropdown-menu">
+                                            <li class="dropdown-item copy link">Copy Link</li>
+                                            <li class="dropdown-item not-interest">Not Interested</li>
+                                            <li class="dropdown-item un-follow">Unfollow User</li>
+                                            <li class="dropdown-item block">Block User</li>
+                                            <li class="dropdown-item report">Report Post</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="category"><span>Category: </span>seismology</div>
+                                <div class="post-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam veniam pariatur esse voluptate accusantium impedit quos corrupti corporis...<a href="./post.html" class="read-more">read more.</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="center-me">
+                            <a href="./posts.html" class="btn btn-outline-dark">View More</a>                    
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--add goes here-->
+    <div class="large-ad-space">
+        <div class="container">
+            <div class="large-ad">
+                Ad space
+            </div>
+        </div>
+    </div>
+
+    <section id="questions">
+        <div class="container">
+            <h2>Questions</h2>
+
+            <!--add new question-->
+            <h3>Add question</h3>
+            <form method="POST" id="add-question-form">
+                <div class="mb-3">
+                    <input type="text" name="add-question-title" id="add-question-title" class="form-control" placeholder="type your question">
+                </div>
+                <div class="mb-3">
+                    <textarea name="add-question-textarea" id="add-question-textarea" class="form-control" placeholder="write your question in depth"></textarea>
+                </div>
+                <div class="mb-3 form-row">
+                    <label for="addQuestionMediaInput" class="form-label">input images</label>
+                    <input class="form-control form-control-sm" id="addQuestionMediaInput" type="file" multiple>
+                </div>
+                <div class="mb-3 count-container" id="ques-add-link">
+                    <div class="count-header">
+                       <span>Links</span>
+                       <button type="button" class="btn btn-outline-dark" id="quesAddLink" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add Link"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="center-me">
+                    <input type="submit" value="Submit" name="submitNewQuestion" class="btn btn-outline-dark">
+                </div>
+            </form>
+
+            
+            <div class="row" id="new-questions">
+                <h3>New Questions</h3>
+                <div class="col-md-2">
+                    <div class="filter">
+                        <div class="filter-header">
+                            <h4><i class="fas fa-filter"></i> Filter</h4>
+                            <span class="filter-arrow"><i class="fas fa-sort-down"></i></span>
+                        </div>
+                        <form method="GET" class="filter-form">
+                            <div class="check-group">
+                                <h5>category</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-seismology">
+                                    <label class="form-check-label" for="q-filter-seismology">seismology</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-gravity">
+                                    <label class="form-check-label" for="q-filter-gravity">gravity</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-magnetic">
+                                    <label class="q-filter-magnetic" for="q-filter-seismology">magnetic</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-well-logging">
+                                    <label class="form-check-label" for="q-filter-well-logging">well-logging</label>
+                                </div>
+                            </div>
+                            
+                            <div class="check-group">
+                                <h5>Tags</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-seismology-2">
+                                    <label class="form-check-label" for="q-filter-seismology-2">seismology</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-gravity-2">
+                                    <label class="form-check-label" for="q-filter-gravity-2">gravity</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-magnetic-2">
+                                    <label class="q-filter-magnetic" for="q-filter-seismology-2">magnetic</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="q-filter-well-logging-2">
+                                    <label class="form-check-label" for="q-filter-well-logging-2">well-logging</label>
+                                </div>
+                            </div>
+                            
+                            <div class="center-me">
+                                <input type="submit" value="Filter Questions" name="submitQuestionFilter" class="btn btn-outline-dark">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ad-space">
+                        Ad Space
+                    </div>
+                </div>
+
+                <div class="col-md-10 questions">
+                    <!--questions-->
+                    <div>
+                        <div class="question">
+                            <div class="question-header">
+                                <h5 class="title"><a href="./question.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="question-row">
+                                    <div class="questioner"><span>Asked By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                        <div class="navbar navbar-expand ms-3">
+                                            <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="options-drop-down dropdown-menu">
+                                                <li class="dropdown-item copy-link">Copy Link</li>
+                                                <li class="dropdown-item not-interest">Not Interested</li>
+                                                <li class="dropdown-item un-follow">Unfollow User</li>
+                                                <li class="dropdown-item block">Block User</li>
+                                                <li class="dropdown-item report">Report Question</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-in-depth">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ex nihil, maiores quam perferendis deserunt... <a href="./question.html">view question</a></p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question-header">
+                                <h5 class="title"><a href="./question.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="question-row">
+                                    <div class="questioner"><span>Asked By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                        <div class="navbar navbar-expand ms-3">
+                                            <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="options-drop-down dropdown-menu">
+                                                <li class="dropdown-item copy-link">Copy Link</li>
+                                                <li class="dropdown-item not-interest">Not Interested</li>
+                                                <li class="dropdown-item un-follow">Unfollow User</li>
+                                                <li class="dropdown-item block">Block User</li>
+                                                <li class="dropdown-item report">Report Question</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-in-depth">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ex nihil, maiores quam perferendis deserunt... <a href="./question.html">view question</a></p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question-header">
+                                <h5 class="title"><a href="./question.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="question-row">
+                                    <div class="questioner"><span>Asked By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                        <div class="navbar navbar-expand ms-3">
+                                            <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="options-drop-down dropdown-menu">
+                                                <li class="dropdown-item copy-link">Copy Link</li>
+                                                <li class="dropdown-item not-interest">Not Interested</li>
+                                                <li class="dropdown-item un-follow">Unfollow User</li>
+                                                <li class="dropdown-item block">Block User</li>
+                                                <li class="dropdown-item report">Report Question</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-in-depth">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ex nihil, maiores quam perferendis deserunt... <a href="./question.html">view question</a></p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question-header">
+                                <h5 class="title"><a href="./question.html">blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis, excepturi facere qui fugiat atque ?</a></h5>
+                                <div class="question-row">
+                                    <div class="questioner"><span>Asked By: </span><a href="./profile.html">Mido</a></div>
+                                    <div>
+                                        <div class="date"><span>Date: </span> <span>25-1-2021</span></div>
+                                        <button class="bookmark-btn btn not-bookmarked" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to bookmarks"><i class="far fa-star"></i></button>
+                                        <div class="navbar navbar-expand ms-3">
+                                            <i class="fas fa-ellipsis-v dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="options-drop-down dropdown-menu">
+                                                <li class="dropdown-item copy-link">Copy Link</li>
+                                                <li class="dropdown-item not-interest">Not Interested</li>
+                                                <li class="dropdown-item un-follow">Unfollow User</li>
+                                                <li class="dropdown-item block">Block User</li>
+                                                <li class="dropdown-item report">Report Question</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-in-depth">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet ex nihil, maiores quam perferendis deserunt... <a href="./question.html">view question</a></p>
+                            </div>
+                        </div>
+
+                        <div class="center-me">
+                            <a href="./questions.html" class="btn btn-outline-dark">View More</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--add goes here-->
+    <div class="large-ad-space">
+        <div class="container">
+            <div class="large-ad">
+                Ad space
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <h2>about the site</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id doloribus at, 
+                praesentium velit ratione quod perferendis nulla hic tempora! Officia quod dignissimos
+                dicta ut eaque porro totam eveniet corrupti blanditiis repellendus quia voluptates 
+                accusantium, expedita maiores, placeat, aspernatur distinctio! 
+                Assumenda earum illo eligendi fugit commodi dicta expedita eaque veritatis.
+            </p>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        &copy; <a href="#">Mohamed Hany</a>
+    </footer>
+
+    <!--chat box-->
+    <div class="chat-container">
+        <div class="container mb-0">
+            <div id="chat">
+                <div id="all-chats">
+                    <div class="chat-box d-none">
+                        <div class="chat-box-header">
+                            <p><span class="n-of-online">12</span> Online</p>
+                            <span id="close">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="chat-box-search">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                            </form>
+                        </div>
+
+                        <div class="chat-box-body">
+                            <div class="chat-friend">
+                                <img src="./images/L6.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M3.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M4.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/L7.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-friend">
+                                <img src="./images/L6.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M3.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M4.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/L7.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-btn" id="chat-btn">
+                        <span>Chat</span> <p><span class="n-of-n-mess">1</span> new messages</p>
+                    </div>
+                </div>
+
+
+
+                <div class="single-chat d-none">
+                    <div class="s-chat-header">
+                        <div class="chat-box-row">
+                            <div class="friend-img">
+                                <img src="./images/L6.jpeg" alt="hghg">
+                                <div class="friend-info">
+                                    <p class="f-name"><a href="./profile.html">Name</a></p>
+                                    <p class="status last-seen"></p>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend-options">
+                                <i class="fas fa-times cls-s-chat"></i>
+                                <div class="small-options">
+                                    <i class="fas fa-video"></i>
+                                    <i class="fas fa-phone"></i>
+                                    <div class="navbar">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-item mute">mute</li>
+                                            <li class="dropdown-item block">block</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="s-chat-body">
+                        <div class="message-row send">
+                            <div class="message-box">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, autem quae? Provident est obcaecati placeat sapiente magnam repudiandae adipisci qui!</p>
+                                <span class="message-date-time"><span class="msg-date">12-12-2020</span> <span class="msg-time">13:50</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row recieve">
+                            <div class="message-box">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, autem quae? Provident est obcaecati placeat sapiente magnam repudiandae adipisci qui!</p>
+                                <span class="message-date-time"><span class="msg-date">12-12-2020</span> <span class="msg-time">13:55</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row recieve">
+                            <div class="message-box message-media">
+                                <img src="./images/lanscape.png" alt="">
+                                <span class="message-date-time"><span class="msg-date">18-1-2021</span> <span class="msg-time">11:30</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row send">
+                            <div class="message-box message-media">
+                                <img src="./images/M4.jpeg" alt="">
+                                <span class="message-date-time"><span class="msg-date">20-1-2021</span><span class="msg-time">09:46</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s-chat-type-message">
+                        <form method="POST">
+                            <textarea name="s-chat-type-message-textarea" placeholder="Type your message here"></textarea>
+                            <input type="file" class="d-none" name="s-chat-files" multiple>
+                            <input type="submit" class="d-none" value="send">
+                            <div>
+                                <i class="fas fa-paperclip add-files-to-single-chat"></i>
+                                <i class="fas fa-paper-plane send-msg-in-single-chat"></i>                                
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logInLabel">Log in to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" name="loginEmail" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">This email deson't exist</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPass" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPass"  name="loginPass" aria-describedby="loginPassHelp">
+                            <div id="loginPassHelp" class="form-text">Wrong Passowrd</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-text"><a href="./forget-pass.html">Foregt Passowrd</a> <a href="./reset-pass.html">Reset Passowrd</a></div>
+                        </div>
+                        <input type="submit" name="logInSupmit" class="d-none">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-dark">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--scripts-->
+<script src="./scripts/jquery-3.5.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/swiper-bundle.min.js"></script>
+<script src="./scripts/video.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>

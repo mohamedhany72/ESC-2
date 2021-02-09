@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESC - MAKE CONNECTIONS</title>
+    <link rel="shortcut icon" href="./images/ESC.png" type="image/x-icon">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <!--video-js-->
+    <link rel="stylesheet" href="./styles/video-js.min.css">
+    <link rel="stylesheet" href="./styles/video-js-city.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--main style sheet-->
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body id="connections-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Earth Science Community">ESC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./connections.html">Make Connections</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Top Scientist</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./posts.html">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./questions.html">Question</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./search.html">search</a>
+                    </li>
+                    <li><hr class="dropdown-divider d-lg-none"></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+                <!-- <ul class="navbar-nav" id="profile-dropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="p-pic" src="./images/M0.jpeg" alt="M0">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item">name</li>
+                            <li class="dropdown-item">Jop</li>
+                            <li><a href="./profile.html" class="btn btn-outline-dark">View Profile</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+                <div class="sign-div">
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</button>
+                    <a href="./sign-up.html" class="btn btn-outline-dark">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="fader"></div>
+        <div class="container">
+            <h1>Earth Science Community</h1>
+            <p>A place that every scientist will love</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Make New Connections</h2>
+            <div class="profiles">
+                <div class="profile-row">
+                    <div class="profile-data">
+                        <img src="./images/M4.jpeg" alt="">
+                        <div class="name-job">
+                            <p class="profile-name">Name</p>
+                            <p class="profile-job">Geophysist</p>
+                        </div>
+                    </div>
+                    <div class="action-btns">
+                        <form method="post" id="1">
+                            <input type="submit" class="btn btn-outline-dark" value="Connect" name="connect1">
+                        </form>
+                        <a class="btn btn-outline-dark ms-3" href="./profile.html">View Profile</a>
+                    </div>
+                </div>
+
+                <div class="profile-row">
+                    <div class="profile-data">
+                        <img src="./images/M4.jpeg" alt="">
+                        <div class="name-job">
+                            <p class="profile-name">Name</p>
+                            <p class="profile-job">Geophysist</p>
+                        </div>
+                    </div>
+                    <div class="action-btns">
+                        <form method="post" id="2">
+                            <input type="submit" class="btn btn-outline-dark" value="Connect" name="connect1">
+                        </form>
+                        <a class="btn btn-outline-dark ms-3" href="./profile.html">View Profile</a>
+                    </div>
+                </div>
+
+                <div class="profile-row">
+                    <div class="profile-data">
+                        <img src="./images/M4.jpeg" alt="">
+                        <div class="name-job">
+                            <p class="profile-name">Name</p>
+                            <p class="profile-job">Geophysist</p>
+                        </div>
+                    </div>
+                    <div class="action-btns">
+                        <form method="post" id="3">
+                            <input type="submit" class="btn btn-outline-dark" value="Connect" name="connect1">
+                        </form>
+                        <a class="btn btn-outline-dark ms-3" href="./profile.html">View Profile</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        &copy; <a href="#">Mohamed Hany</a>
+    </footer>
+
+    <!--chat box-->
+    <div class="chat-container">
+        <div class="container mb-0">
+            <div id="chat">
+                <div id="all-chats">
+                    <div class="chat-box d-none">
+                        <div class="chat-box-header">
+                            <p><span class="n-of-online">12</span> Online</p>
+                            <span id="close">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="chat-box-search">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                            </form>
+                        </div>
+
+                        <div class="chat-box-body">
+                            <div class="chat-friend">
+                                <img src="./images/L6.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M3.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M4.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/L7.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-friend">
+                                <img src="./images/L6.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M3.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/M4.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status online"></span>
+                                    </div>
+                                    <div class="chat-box-row all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend">
+                                <img src="./images/L7.jpeg" alt="kjf">
+                                <div class="chat-friend-info">
+                                    <div class="chat-box-row">
+                                        <span class="chat-friend-name">Name 1</span>
+                                        <span class="status offline"></span>
+                                    </div>
+                                    <div class="chat-box-row  all-chat-msg">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consectetur facilis libero sit in eveniet earum, corrupti necessitatibus deserunt nulla qui deleniti, atque nihil! Debitis ex dolores sunt iure quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-btn" id="chat-btn">
+                        <span>Chat</span> <p><span class="n-of-n-mess">1</span> new messages</p>
+                    </div>
+                </div>
+
+
+
+                <div class="single-chat d-none">
+                    <div class="s-chat-header">
+                        <div class="chat-box-row">
+                            <div class="friend-img">
+                                <img src="./images/L6.jpeg" alt="hghg">
+                                <div class="friend-info">
+                                    <p class="f-name"><a href="./profile.html">Name</a></p>
+                                    <p class="status last-seen"></p>
+                                </div>
+                            </div>
+
+                            <div class="chat-friend-options">
+                                <i class="fas fa-times cls-s-chat"></i>
+                                <div class="small-options">
+                                    <i class="fas fa-video"></i>
+                                    <i class="fas fa-phone"></i>
+                                    <div class="navbar">
+                                        <i class="fas fa-ellipsis-v dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-item mute">mute</li>
+                                            <li class="dropdown-item block">block</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="s-chat-body">
+                        <div class="message-row send">
+                            <div class="message-box">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, autem quae? Provident est obcaecati placeat sapiente magnam repudiandae adipisci qui!</p>
+                                <span class="message-date-time"><span class="msg-date">12-12-2020</span> <span class="msg-time">13:50</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row recieve">
+                            <div class="message-box">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, autem quae? Provident est obcaecati placeat sapiente magnam repudiandae adipisci qui!</p>
+                                <span class="message-date-time"><span class="msg-date">12-12-2020</span> <span class="msg-time">13:55</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row recieve">
+                            <div class="message-box message-media">
+                                <img src="./images/lanscape.png" alt="">
+                                <span class="message-date-time"><span class="msg-date">18-1-2021</span> <span class="msg-time">11:30</span></span>
+                            </div>
+                        </div>
+                        <div class="message-row send">
+                            <div class="message-box message-media">
+                                <img src="./images/M4.jpeg" alt="">
+                                <span class="message-date-time"><span class="msg-date">20-1-2021</span><span class="msg-time">09:46</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s-chat-type-message">
+                        <form method="POST">
+                            <textarea name="s-chat-type-message-textarea" placeholder="Type your message here"></textarea>
+                            <input type="file" class="d-none" name="s-chat-files" multiple>
+                            <input type="submit" class="d-none" value="send">
+                            <div>
+                                <i class="fas fa-paperclip add-files-to-single-chat"></i>
+                                <i class="fas fa-paper-plane send-msg-in-single-chat"></i>                                
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logInLabel">Log in to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" name="loginEmail" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">This email deson't exist</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPass" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPass"  name="loginPass" aria-describedby="loginPassHelp">
+                            <div id="loginPassHelp" class="form-text">Wrong Passowrd</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-text"><a href="./forget-pass.html">Foregt Passowrd</a> <a href="./reset-pass.html">Reset Passowrd</a></div>
+                        </div>
+                        <input type="submit" name="logInSupmit" class="d-none">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-dark">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--scripts-->
+<script src="./scripts/jquery-3.5.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/swiper-bundle.min.js"></script>
+<script src="./scripts/video.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>
