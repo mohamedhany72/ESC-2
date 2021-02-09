@@ -1450,9 +1450,12 @@ span.li-title{
 
 
 /*I am done*/
-#view-comments .dropdown-menu{
+#view-comments .dropdown-menu, .question-container .dropdown-menu{
     left: -150px;
 }
 
+.fa-ellipsis-v{
+    padding: 4px 5px;
+}
 
 
